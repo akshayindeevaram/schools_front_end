@@ -1,0 +1,14 @@
+.slideimg{
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+#next{
+    position: absolute;
+    top: 700px;
+    right: 50px;
+}
+#prev{
+    position: absolute;
+    top: 700px;
+}

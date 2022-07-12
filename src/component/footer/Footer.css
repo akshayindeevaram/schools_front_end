@@ -1,0 +1,34 @@
+.foot{
+    background-color: beige;
+}
+.footer{
+    display: flex;
+}
+
+.left-footer{
+    padding-top: 20px;
+    padding-right: 20px;
+    text-align: center;
+    flex: 0 0 50%;
+    flex-wrap: wrap;
+    width: 50%;
+}
+.input-section{
+    text-align: center;
+}
+.links{
+    text-align: left;
+}
+.right-footer{
+    padding-top: 20px;
+    text-decoration: none;
+    flex: 0 0 50%;
+    flex-wrap: wrap;
+    width: 50%;
+}
+.copyright{
+    text-align: center;
+}
+.quick-links{
+    text-decoration: none;
+}

@@ -1,0 +1,75 @@
+{"features":[
+    {
+      "img": "https://media.gettyimages.com/photos/businessman-giving-presentation-in-modern-coworking-space-picture-id1160029269?k=20&m=1160029269&s=612x612&w=0&h=YGvjqwRDiGB7F8ha9h_mqGXg7Aas24Xy0y7zippQKEE=",
+      
+      "title": "EXPERIENCED STAFF",
+      "description": "We have well experienced and competent staff and they are guiding and supporting our students in all fields."
+    },
+    {
+      "img": "https://media.gettyimages.com/photos/student-selecting-book-from-shelf-in-library-picture-id1200909950?k=20&m=1200909950&s=612x612&w=0&h=ox15s9HQnTg14tpLE9MSfju3jelpN8-RfsmX3XI_4m0=",
+      "title": "E-LIBRARY",
+      "description": "In addition to a collection of wide variety of books, we provide a digital library facility for the benefit of students and staff."
+    },
+    {
+      "img": "https://media.gettyimages.com/photos/diverse-group-of-happy-children-getting-on-school-bus-picture-id1166892600?k=20&m=1166892600&s=612x612&w=0&h=uXctXy1wzoKQPKS2_xyaYBqFLtqwfRYbYtaG7efHBYo=",
+      "title": "SCHOOL BUS SERVICE",
+      "description": "We have buses plying all the major routes. The majority of students avail school bus facility."
+    },
+    {
+      "img": "https://media.gettyimages.com/photos/many-activities-picture-id695604058?k=20&m=695604058&s=612x612&w=0&h=yyaUqegJqeCB4De4GCAmtvOwtTydYrKI04V9xag8lck=",
+      "title": "OTHER ACTIVITIES",
+      "description": "We are giving importance to Co-curricular activities like Basketball, Rollerskating, Chess, Keyboard, Taekwondo, Dance & music, Yoga classes and coaching is given by experienced staff."
+    }
+  ],
+
+"nav":[
+    {
+      "name": "Home",
+      "path": "/"
+    },
+    {
+      "name": "About",
+      "path": "/about"
+    },
+    {
+      "name": "Admission",
+      "path": "/admission"
+    },
+    {
+      "name": "News",
+      "path": "/newsandevents"
+    },
+    {
+      "name": "Contacts",
+      "path": "/contacts"
+    }
+  ],
+
+  "about":
+    {
+      "content": "A school is an educational environment where children go to learn from a teacher. Topics such as reading, writing and mathematicsare central to education. Most of a student's time is spent in aclassroom. This is where 10 to 30 people sit to take part in educational discussion. In the United States, the average number of students per classroom in primary schools is 23.1.[1] The term school is used for many educational environments--particularly in North America. There are different types of schools: elementary schools (primary in the UK), middle schools (secondary in the UK), and so on.",
+
+    "image":"https://thesaurus.plus/img/synonyms/124/good_feature.png"
+    },
+
+  
+    "images": [
+      {
+        "image": "https://thesaurus.plus/img/synonyms/124/good_feature.png"
+      },
+      {
+        "image": "slide2"
+      },
+      {
+        "image": "slide3"
+      },
+      {
+        "image": "slide2"
+      }
+    ]
+}
+
+
+
+
+  
