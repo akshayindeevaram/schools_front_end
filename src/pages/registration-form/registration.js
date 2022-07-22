@@ -2,12 +2,13 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./registration.css";
 import { Link } from "react-router-dom";
+
 function RegistrationForm() {
-  const [firstName, setFirstName] = useState();
-  const [lastName, setLastName] = useState();
-  const [email, setEmail] = useState();
-  const [password, setPassword] = useState();
-  const [confirmPassword, setConfirmPassword] = useState();
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
 
   const handleInputChange = (e) => {
     const { id, value } = e.target;
@@ -29,7 +30,7 @@ function RegistrationForm() {
   };
 
   const handleSubmit = (e) => {
-    // e.preventDefault();
+    e.preventDefault();
     if (password !== confirmPassword){
       console.log("Password is not matching!");
     }else{
@@ -55,7 +56,7 @@ function RegistrationForm() {
           <input
             className="form__input"
             type="text"
-            value={firstName}
+            
             onChange={(e) => handleInputChange(e)}
             id="firstName"
             placeholder="First Name"
@@ -69,7 +70,7 @@ function RegistrationForm() {
             type="text"
             name=""
             id="lastName"
-            value={lastName}
+           
             className="form__input"
             onChange={(e) => handleInputChange(e)}
             placeholder="LastName"
@@ -83,7 +84,7 @@ function RegistrationForm() {
             type="email"
             id="email"
             className="form__input"
-            value={email}
+          
             onChange={(e) => handleInputChange(e)}
             placeholder="Email"
           />
@@ -96,7 +97,7 @@ function RegistrationForm() {
             className="form__input"
             type="password"
             id="password"
-            value={password}
+           
             onChange={(e) => handleInputChange(e)}
             placeholder="Password"
           />
@@ -109,14 +110,14 @@ function RegistrationForm() {
             className="form__input"
             type="password"
             id="confirmPassword"
-            value={confirmPassword}
+            
             onChange={(e) => handleInputChange(e)}
             placeholder="Confirm Password"
           />
         </div>
       </div>
       <div class="footer">
-        <button onClick={() => handleSubmit()} type="submit" class="btn">
+        <button onClick={(e) => handleSubmit(e)} type="submit" class="btn">
           Register
         </button>
       </div>

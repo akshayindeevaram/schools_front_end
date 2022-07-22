@@ -11,10 +11,10 @@ import Admission from "./pages/admission/Admission";
 import Contacts from "./pages/contacts/Contacts";
 import NewsandEvents from "./pages/news/NewsandEvents";
 import RegistrationForm from "./pages/registration-form/registration";
+import Header from "./component/header/Header";
 
 function App() {
   const auth = useSelector((state: any) => state.login.isAuthenticated);
-  console.log("auth", auth);
 
   const dispatch = useDispatch();
   useEffect(() => {
@@ -27,6 +27,7 @@ function App() {
       <Router>
         {/* <Header /> */}
         <Switch>
+          {/* <ProtectedRoute auth={auth} exact path="/" component={Header}/> */}
           <Route path="/registrationform" component={RegistrationForm}/>
           <ProtectedRoute auth={auth} exact path="/" component={Home} />
           <Route exact path="/login" component={Login} />

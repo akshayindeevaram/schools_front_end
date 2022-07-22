@@ -35,7 +35,6 @@ export const fetchFeat = () => {
 
       .then((response) => {
         const feat = response.data;
-        console.log("vvvvvvvvvvvvvv", feat);
         
         dispatch(fetchFeatSuccess(feat));
       })

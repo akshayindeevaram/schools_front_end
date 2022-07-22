@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./Login.css";
 import { useSelector, useDispatch } from "react-redux";
 import { getLogin } from "../../redux/login/actions/loginActions";
@@ -9,29 +9,23 @@ import axios from "axios";
 const Login = () => {
   const dispatch = useDispatch();
   const history = useHistory();
-  const state = useSelector((state:any) => state.login.user);
+  const state = useSelector((state) => state.login.user);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  // console.log("hoo", state)
-  const handleSubmit =  (e: { preventDefault: () => void; }) => {
+  const handleSubmit =  async(e) => {
     e.preventDefault();
     const formdata = {email:email, password:password}
-
-    axios.post("http://localhost:5000/api/v1/login", formdata)
-    .then(res=>localStorage.setItem('token', JSON.stringify(res.data.token)))
-
+try {
+  const response = await axios.post("http://localhost:5000/api/v1/login", formdata)
+    // .then(res=>)
+    localStorage.setItem('token', JSON.stringify(response.data.token))
+    dispatch(getLogin());
+    history.push("/")
+} catch (error) {
+  alert(error.response.data.message);
+  console.log(error.response);
   
-    if (email && password) {
-      if (state.email === email && state.pass === password){
-        dispatch(getLogin());
-        history.push("/")
-      }else{
-        alert("Credentials does not match")
-      }
-      // console.log(email, password);
-    } else {
-      alert("Wrong credentials");
-    }
+}
   };
 
   return (
@@ -62,7 +56,5 @@ const Login = () => {
 };
 
 export default Login;
-function token(token: any) {
-  throw new Error("Function not implemented.");
-}
+
 

@@ -1,31 +1,47 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Footer from '../../component/footer/Footer'
 import Header from '../../component/header/Header'
 import Nav from '../../component/nav/Nav'
+import { fetchAbout } from '../../redux/about/actions/aboutActions'
 import "./About.css"
+import { connect } from 'react-redux'
+import { reduxModel } from '../../model'
 
-export default function About() {
+
+function About({aboutData, fetchAbout}: any) {
+const data = aboutData?.message;
+console.log(data&&data[0],aboutData);
+
+  useEffect(() => {
+    fetchAbout()
+  }, [])
+
   return (
     <div>
         <Header/>
         <Nav />
-        
-      <h1 className="main_heading">Welcome to our School</h1>
-      <div className='main_details'>
-            <p>
-              A school is an educational environment where children go to learn
-              from a teacher. Topics such as reading, writing and mathematics
-              are central to education. Most of a student's time is spent in a
-              classroom. This is where 10 to 30 people sit to take part in
-              educational discussion. In the United States, the average number
-              of students per classroom in primary schools is 23.1.[1] The term
-              "school" is used for many educational environments--particularly
-              in North America. There are different types of schools: elementary
-              schools (primary in the UK), middle schools (secondary in the UK),
-              and so on.
-            </p>
-            </div>
-            <Footer/>
+    
+      <h1 className="main_heading">{data&&data[0].main_heading}</h1>
+      <div className='main_details'>{data&&data[0].description}</div>
+        <Footer/>
     </div>
   )
 }
+
+const mapStateToProps = (state:reduxModel) => {
+  // console.log(state.about.about,"mmmmmmmmmmmmmmmmmmmmm");
+  
+  return {
+    aboutData: state.about.about
+    // aboutData: state.reducer.about
+  }
+}
+
+const mapDispatchToProps  = (dispatch: any)=> {
+ 
+  return{
+  fetchAbout:()=>dispatch(fetchAbout())
+}
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(About)

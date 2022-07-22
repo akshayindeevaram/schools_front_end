@@ -30,7 +30,7 @@ export const fetchNav = () => {
     dispatch(fetchNavRequest)
     axios
       .get(`${process.env.REACT_APP_JSON_API}nav`)
-      // .get("http://localhost:3005/nav")
+      
       .then((response) => {
         const nav = response.data;
         dispatch(fetchNavSuccess(nav))

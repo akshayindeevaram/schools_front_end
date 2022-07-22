@@ -52,6 +52,7 @@ export default class AboutSection extends React.Component<{},any> {
           </div>
           <div className="About-des">
             <p>
+              
               A school is an educational environment where children go to learn
               from a teacher. Topics such as reading, writing and mathematics
               are central to education. Most of a student's time is spent in a

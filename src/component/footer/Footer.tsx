@@ -35,7 +35,6 @@ export default class Footer extends Component {
   render() {
     const { name, email, items } = this.state;
     // console.log(items,email,name)
-    console.log(items);
     return (
       <div className="foot">
         <div className="footer">
