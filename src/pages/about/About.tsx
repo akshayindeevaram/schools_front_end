@@ -10,7 +10,7 @@ import { reduxModel } from '../../model'
 
 function About({aboutData, fetchAbout}: any) {
 const data = aboutData?.message;
-console.log(data&&data[0],aboutData);
+console.log(data&&data[0],"fffffffffffffffffffffffff");
 
   useEffect(() => {
     fetchAbout()

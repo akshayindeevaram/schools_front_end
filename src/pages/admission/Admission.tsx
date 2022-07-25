@@ -13,10 +13,10 @@ export default function Admission() {
     e.preventDefault();
 
     
-    // setName("");
-    // setPhoneno("");
-    // setQualification("");
-    // setResultfile("");
+    setName("");
+    setPhoneno("");
+    setQualification("");
+    setResultfile("");
 
     async function admissionVerify() {
       
