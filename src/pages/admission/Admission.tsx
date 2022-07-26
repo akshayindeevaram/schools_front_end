@@ -25,13 +25,14 @@ export default function Admission() {
       
       if(userLocal){
             
-    // const formdata = {name:name, phoneno:phoneno, qualification:qualification,resultfile:resultfile}
-    // console.log(formdata,"444444444444444");
+    const formdata = {name:name, phoneno:phoneno, qualification:qualification,resultfile:resultfile}
+    console.log(formdata,"444444444444444");
     const uploadData = new FormData()
     uploadData.append('resultfile',resultfile[0]);
     uploadData.append('name',name);
     uploadData.append('phoneno',phoneno);
     uploadData.append('qualification',qualification);
+    
     
         const user:any=JSON.parse(userLocal)
         try{
@@ -87,6 +88,7 @@ export default function Admission() {
             type="file"
             name="uploaded_file"
             onChange={(e:any) => setResultfile(e.target.files)}
+            // value={resultfile}
           />
           <button type="submit" className="submit_button">
             Submit
