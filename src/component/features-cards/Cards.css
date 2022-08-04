@@ -1,36 +1,36 @@
-@import url("https://fonts.googleapis.com/css2? family=Oxygen:wght@300;400;700&display=swap");
-*{
-    box-sizing: border-box;
-    /* margin: 0; */
-    padding: 0;
+@import url('https://fonts.googleapis.com/css2? family=Oxygen:wght@300;400;700&display=swap');
+* {
+	box-sizing: border-box;
+	/* margin: 0; */
+	padding: 0;
 }
-body{
-    font-family: Oxygen, sans-serif;
-    /* margin: 2rem; */
+body {
+	font-family: Oxygen, sans-serif;
+	/* margin: 2rem; */
 }
-.card{
-    overflow: hidden;
-    box-shadow: 0 2px 20px clr-gray300;
-    border-radius:radius;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    cursor: pointer;
-    transition: transform 200ms ease-in;
+.card {
+	overflow: hidden;
+	box-shadow: 0 2px 20px clr-gray300;
+	border-radius: radius;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	cursor: pointer;
+	transition: transform 200ms ease-in;
 }
-.card__image{
-    height: 14rem;
-    width: 100%;
-    object-fit: scale-down;
-}   
-.card__title{
-    text-align: center;
-    padding: 1rem;
+.card__image {
+	height: 14rem;
+	width: 100%;
+	object-fit: scale-down;
 }
-.card__description{
-    text-align: center;
-    padding: 0 1rem;
+.card__title {
+	text-align: center;
+	padding: 1rem;
 }
-.card:hover{
-    transform: scale(1.02);
+.card__description {
+	text-align: center;
+	padding: 0 1rem;
+}
+.card:hover {
+	transform: scale(1.02);
 }

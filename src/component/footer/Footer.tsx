@@ -1,84 +1,93 @@
-import React, { Component } from "react";
-import "./Footer.css";
+import React, { Component } from 'react';
+import './Footer.css';
 
-type handleProps={
-  target:{name:string, value:string}
-}
+type handleProps = {
+	target: { name: string; value: string };
+};
 export default class Footer extends Component {
-  state = {
-    name: "",
-    email: "",
-    items: [],
-  };
+	state = {
+		name: '',
+		email: '',
+		items: [],
+	};
 
+	handleChange = (e: handleProps) => {
+		this.setState({
+			[e.target.name]: e.target.value,
+		});
+	};
 
-  handleChange = (e:handleProps) => {
-    this.setState({
-      [e.target.name]: e.target.value,
-    });
-  };
+	storeItems = (event: { preventDefault: () => void }) => {
+		event.preventDefault();
+		const { name, email } = this.state;
+		// const allItems = this.state.items;
 
-  storeItems = (event: { preventDefault: () => void }) => {
-    event.preventDefault();
-    const { name, email } = this.state;
-    // const allItems = this.state.items;
+		// allItems.push({ name, email });
+		this.setState({
+			// items: allItems,
+			items: [...this.state.items, { name, email }],
+			email: '',
+			name: '',
+		});
+	};
 
-    // allItems.push({ name, email });
-    this.setState({
-      // items: allItems,
-      items:[...this.state.items,{name,email}],
-      email: "",
-      name: "",
-    });
-  };
-
-  render() {
-    const { name, email, items } = this.state;
-    // console.log(items,email,name)
-    return (
-      <div className="foot">
-        <div className="footer">
-          <div className="left-footer">
-            <label>Get Subscribed</label>
-          </div>
-          <div className="right-footer">
-            <form className="input-section" onSubmit={this.storeItems}>
-              <input
-                type="text"
-                name="name"
-                placeholder="Enter your name"
-                value={name}
-                onChange={this.handleChange}
-              />
-              <input
-                type="email"
-                name="email"
-                placeholder="Enter your email here"
-                value={email}
-                onChange={this.handleChange}
-              />
-              <button type="submit">Submit</button>
-            </form>
-            <div className="links">
-            <h5>Quick links</h5>
-            <p>
-              <a className="quick-links" href="https://www.google.com">
-                Fee Payment
-              </a>
-            </p>
-            <p>
-              <a className="quick-links" href="https://www.facebook.com">
-                Latest Notifications
-              </a>
-            </p>
-            </div>
-            </div>
-        </div>
-        <div className="copyright"><h6>© Copyright Agency and contributors 2022. ABN 53 001 228 799</h6></div>
-      </div>
-      
-    );
-  }
+	render() {
+		const { name, email, items } = this.state;
+		// console.log(items,email,name)
+		return (
+			<div className="foot">
+				<div className="footer">
+					<div className="left-footer">
+						<label>Get Subscribed</label>
+					</div>
+					<div className="right-footer">
+						<form
+							className="input-section"
+							onSubmit={this.storeItems}>
+							<input
+								type="text"
+								name="name"
+								placeholder="Enter your name"
+								value={name}
+								onChange={this.handleChange}
+							/>
+							<input
+								type="email"
+								name="email"
+								placeholder="Enter your email here"
+								value={email}
+								onChange={this.handleChange}
+							/>
+							<button type="submit">Submit</button>
+						</form>
+						<div className="links">
+							<h5>Quick links</h5>
+							<p>
+								<a
+									className="quick-links"
+									href="https://www.google.com">
+									Fee Payment
+								</a>
+							</p>
+							<p>
+								<a
+									className="quick-links"
+									href="https://www.facebook.com">
+									Latest Notifications
+								</a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div className="copyright">
+					<h6>
+						© Copyright Agency and contributors 2022. ABN 53 001 228
+						799
+					</h6>
+				</div>
+			</div>
+		);
+	}
 }
 
 // import React, { useState } from "react";

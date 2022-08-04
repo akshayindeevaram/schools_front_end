@@ -1,22 +1,21 @@
-.About{
-    display: flex;
-    flex-direction: row;
+.About {
+	display: flex;
+	flex-direction: row;
 }
-.us{
-    text-align: center;
+.us {
+	text-align: center;
 }
-.About-img{
-    text-align: center;
-    flex: 0 0 50%;
-    flex-wrap: wrap;
-    width: 50%;
+.About-img {
+	text-align: center;
+	flex: 0 0 50%;
+	flex-wrap: wrap;
+	width: 50%;
 }
-.AboutClass{
-    height: 250px;
-  
+.AboutClass {
+	height: 250px;
 }
-.About-des{
-    flex: 0 0 50%;
-    flex-wrap: wrap;
-    width: 50%;
+.About-des {
+	flex: 0 0 50%;
+	flex-wrap: wrap;
+	width: 50%;
 }

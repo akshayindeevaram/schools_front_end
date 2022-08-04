@@ -1,13 +1,12 @@
-import React from "react";
-import Cards from "../features-cards/Cards";
-import { connect } from "react-redux";
-import { fetchFeat } from "../../redux";
-import "./Features.css";
-import {reduxModel} from '../../model'
-type props={
-featData:reduxModel,
-}
-
+import React from 'react';
+import Cards from '../features-cards/Cards';
+import { connect } from 'react-redux';
+import { fetchFeat } from '../../redux';
+import './Features.css';
+import { reduxModel } from '../../model';
+type props = {
+	featData: reduxModel;
+};
 
 // import expstaff from "../images/expstaff.jpg";
 // import elib from "../images/elib.jpg";
@@ -23,37 +22,35 @@ featData:reduxModel,
 //   }
 //   useEffect(()=>fetchFeactures(),[])
 
-function Features({featData}:props) {
-  return (
-    <div>
-      <h2 className="feat">Our Feactures</h2>
-      <div className="wrapper">
-      
-        {featData &&
-          featData.feat &&
-           featData.feat.feat.map((feat,ind) => (
-            <Cards
-              img={feat.img}
-              title={feat.title}
-              description={feat.description}
-              key={ind}
-            />
-          ))}
-      </div>
-    </div>
-  );
-
+function Features({ featData }: props) {
+	return (
+		<div>
+			<h2 className="feat">Our Feactures</h2>
+			<div className="wrapper">
+				{featData &&
+					featData.feat &&
+					featData.feat.feat.map((feat, ind) => (
+						<Cards
+							img={feat.img}
+							title={feat.title}
+							description={feat.description}
+							key={ind}
+						/>
+					))}
+			</div>
+		</div>
+	);
 }
-const mapStateToProps = (state:reduxModel) => {
-   return {
-    featData: state,
-  };
+const mapStateToProps = (state: reduxModel) => {
+	return {
+		featData: state,
+	};
 };
 
-const mapDispatchToProps = (dispatch:any) => {
-  return {
-    fetchFeat: () => dispatch(fetchFeat()),
-  };
+const mapDispatchToProps = (dispatch: any) => {
+	return {
+		fetchFeat: () => dispatch(fetchFeat()),
+	};
 };
 
-export default connect(mapStateToProps, mapDispatchToProps) (Features);
+export default connect(mapStateToProps, mapDispatchToProps)(Features);

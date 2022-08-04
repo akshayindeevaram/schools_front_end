@@ -1,24 +1,20 @@
-.feat{
-    text-align: center;
-    /* background-color: aquamarine; */
+.feat {
+	text-align: center;
+	/* background-color: aquamarine; */
 }
-.school-features{
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    
+.school-features {
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
 }
-.school-features-des{
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    
+.school-features-des {
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
 }
-.wrapper{
-    display: grid;
-    grid-template-columns:  repeat(auto-fit,minmax(18rem, 18rem));
-    gap: 2rem;
-    justify-content: center;
-
-    
+.wrapper {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(18rem, 18rem));
+	gap: 2rem;
+	justify-content: center;
 }
